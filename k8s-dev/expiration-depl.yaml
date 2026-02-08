@@ -16,6 +16,8 @@ spec:
         - name: expiration
           image: us-central1-docker.pkg.dev/ticketing-dev-474706/ticketing/expiration
           env:
+            - name: NODE_ENV
+              value: 'development'
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:

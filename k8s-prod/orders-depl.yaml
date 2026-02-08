@@ -17,6 +17,10 @@ spec:
           image: archiepeey/orders:latest
           imagePullPolicy: Always
           env:
+            - name: USE_HTTPS
+              value: 'false'
+            - name: NODE_ENV
+              value: 'production'
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:

@@ -16,6 +16,10 @@ spec:
         - name: auth
           image: us-central1-docker.pkg.dev/ticketing-dev-474706/ticketing/auth
           env:
+            - name: USE_HTTPS
+              value: 'false'
+            - name: NODE_ENV
+              value: 'development'
             - name: MONGO_URI
               value: 'mongodb://auth-mongo-srv:27017/auth'
             - name: JWT_KEY

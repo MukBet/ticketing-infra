@@ -16,6 +16,9 @@ spec:
         - name: client
           image: archiepeey/client:latest
           imagePullPolicy: Always
+          env:
+            - name: NODE_ENV
+              value: 'production'
 ---
 apiVersion: v1
 kind: Service

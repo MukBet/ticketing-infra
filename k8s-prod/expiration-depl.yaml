@@ -17,6 +17,8 @@ spec:
           image: archiepeey/expiration:latest
           imagePullPolicy: Always
           env:
+            - name: NODE_ENV
+              value: 'production'
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:

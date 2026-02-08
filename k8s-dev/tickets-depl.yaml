@@ -16,6 +16,10 @@ spec:
         - name: tickets
           image: us-central1-docker.pkg.dev/ticketing-dev-474706/ticketing/tickets
           env:
+            - name: USE_HTTPS
+              value: 'false'
+            - name: NODE_ENV
+              value: 'development'
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:

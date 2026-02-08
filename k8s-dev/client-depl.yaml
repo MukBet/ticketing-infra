@@ -15,6 +15,9 @@ spec:
       containers:
         - name: client
           image: us-central1-docker.pkg.dev/ticketing-dev-474706/ticketing/client
+          env:
+            - name: NODE_ENV
+              value: 'development'
 ---
 apiVersion: v1
 kind: Service
