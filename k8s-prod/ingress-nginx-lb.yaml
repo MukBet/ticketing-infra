@@ -4,7 +4,6 @@ metadata:
   name: ingress-nginx-controller
   namespace: ingress-nginx
   annotations:
-    service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
     service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.ticketing-muzika-app-prod.store'
 spec:
   type: LoadBalancer
